@@ -1,15 +1,12 @@
-// var myArray = [
-//     "Apples",
-//     "Bananas",
-//     "Pears"
-//   ];
-  
-//   var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
-
-//   console.log(`randomItem`, randomItem)
+// import data from './Data.json'
 
   var a = ["Roger", "Russell", "Clyde", "Egbert", "Clare", "Bobbie", "Simon", "Elizabeth", "Ted", "Caroline"];
 
+  fetch('./Data.json')
+  .then(response => response.json())
+  .then(jsonResponse => console.log(jsonResponse));
+  
+  
   function randomNoRepeats(array) {
     var copy = array.slice(0);
     return function() {
